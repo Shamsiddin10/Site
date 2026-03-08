@@ -246,10 +246,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:64px 6vw
 .reveal{opacity:0;transform:translateY(36px);transition:.7s ease;}
 .reveal.vis{opacity:1;transform:translateY(0);}
 
-/* RESPONSIVE */
+/* ── TABLET (max 960px) ── */
 @media(max-width:960px){
   .nav-links,.nav-btns .btn-p{display:none;}
   .hamburger{display:flex;}
+  section{padding:72px 5vw;}
   .srv-grid{grid-template-columns:1fr 1fr;}
   .pr-grid{grid-template-columns:1fr;}
   .tm-grid{grid-template-columns:1fr 1fr;}
@@ -260,15 +261,96 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:64px 6vw
   .st-row{grid-template-columns:1fr 1fr;}
   .adm-side{width:56px;}
   .adm-nav span{display:none;}
+  .hero h1{letter-spacing:-1px;}
+  .hero-stats{gap:32px;}
 }
+
+/* ── MOBILE (max 580px) ── */
 @media(max-width:580px){
-  .srv-grid{grid-template-columns:1fr;}
-  .tm-grid{grid-template-columns:1fr;}
-  .ts-grid{grid-template-columns:1fr;}
+  /* NAV */
+  nav{padding:14px 5vw;}
+  nav.scrolled{padding:12px 5vw;}
+  .nav-logo{font-size:18px;}
+
+  /* HERO */
+  .hero{padding:100px 5vw 60px;min-height:100svh;}
+  .hero h1{font-size:clamp(34px,10vw,52px);letter-spacing:-1px;line-height:1.08;}
+  .hero-sub{font-size:15px;margin-bottom:28px;}
+  .hero-badge{font-size:12px;padding:6px 14px;}
+  .hero-ctas{flex-direction:column;align-items:center;gap:12px;}
+  .btn-big{width:100%;max-width:320px;padding:14px 24px;font-size:15px;text-align:center;}
+  .hero-stats{flex-wrap:wrap;gap:0;margin-top:48px;display:grid;grid-template-columns:1fr 1fr;}
+  .hstat{padding:16px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.03);}
+  .hstat h3{font-size:28px;}
+  .hstat p{font-size:12px;}
+
+  /* SECTIONS */
+  section{padding:60px 5vw;}
+  .sec-title{font-size:28px;letter-spacing:-.5px;}
+  .sec-sub{font-size:14px;}
+
+  /* SERVICES */
+  .srv-grid{grid-template-columns:1fr;border-radius:18px;}
+  .srv-item{padding:24px 20px;}
+  .srv-item h3{font-size:17px;}
+  .srv-item p{font-size:13px;}
+
+  /* PRICING */
+  .pr-grid{grid-template-columns:1fr;gap:16px;}
+  .pr-card{padding:24px 20px;border-radius:20px;}
+  .pr-price{font-size:36px;}
+
+  /* TEAM */
+  .tm-grid{grid-template-columns:1fr 1fr;gap:12px;}
+  .tm-card{padding:20px 14px;}
+  .tm-ava{width:60px;height:60px;font-size:26px;}
+  .tm-card h4{font-size:14px;}
+  .tm-bio{font-size:12px;}
+
+  /* TESTIMONIALS */
+  .ts-grid{grid-template-columns:1fr;gap:14px;}
+  .ts-card{padding:20px;}
+  .ts-card blockquote{font-size:13px;}
+
+  /* CONTACT */
+  .ct-wrap{grid-template-columns:1fr;gap:32px;}
+  .ct-form{padding:24px 18px;border-radius:20px;}
   .form-row{grid-template-columns:1fr;}
-  .hero-stats{gap:24px;}
-  #botWin{width:calc(100vw - 32px);right:16px;}
-  .ft-grid{grid-template-columns:1fr;}
+  .ct-info h3{font-size:22px;}
+  .ct-items{gap:10px;}
+  .ct-item{padding:12px;}
+
+  /* FOOTER */
+  .ft-grid{grid-template-columns:1fr;gap:28px;}
+  footer{padding:48px 5vw 24px;}
+  .ft-bottom{flex-direction:column;align-items:flex-start;gap:16px;}
+
+  /* BOT */
+  #botBtn{width:54px;height:54px;font-size:24px;bottom:20px;right:16px;}
+  #botWin{width:calc(100vw - 24px);right:12px;bottom:88px;max-height:75vh;border-radius:20px;}
+  .bh{padding:14px 16px;border-radius:20px 20px 0 0;}
+  .bmsgs{padding:14px;}
+  .binput-area{padding:12px 14px;}
+  .binput{font-size:14px;padding:10px 13px;}
+
+  /* ADMIN */
+  #adminBtn{bottom:20px;left:12px;padding:9px 14px;font-size:12px;}
+  #adminOverlay{padding:10px;}
+  .adm-modal{border-radius:20px;max-height:95vh;}
+  .adm-top{padding:16px 18px;}
+  .adm-side{width:48px;}
+  .adm-nav{padding:10px;}
+  .adm-main{padding:16px;}
+  .st-row{grid-template-columns:1fr 1fr;gap:10px;}
+  .st-box{padding:14px 10px;}
+  .st-box .v{font-size:22px;}
+  .adm-login-box{width:100%;padding:28px 20px;}
+  .adm-tbl{font-size:11px;}
+  .adm-tbl th,.adm-tbl td{padding:8px 10px;}
+
+  /* MOBILE MENU */
+  #mobileMenu a{font-size:26px;}
+  #mobileMenu{gap:28px;}
 }
 
 /* LANG */
@@ -559,7 +641,7 @@ body.ru [data-ru]{display:revert;}
         </div>
         <div class="ct-item">
           <div class="ct-ico">✉️</div>
-          <div><b>Email</b><span>info@nexus.uz</span></div>
+          <div><b>Email</b><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4821262e2708262d303d3b663d32">[email&#160;protected]</a></span></div>
         </div>
         <div class="ct-item">
           <div class="ct-ico">🕐</div>
@@ -621,7 +703,7 @@ body.ru [data-ru]{display:revert;}
       <h5 data-uz>Aloqa</h5><h5 data-ru>Контакт</h5>
       <ul>
         <li><a href="#">+998 71 200 00 00</a></li>
-        <li><a href="#">info@nexus.uz</a></li>
+        <li><a href="#"><span class="__cf_email__" data-cfemail="9bf2f5fdf4dbf5fee3eee8b5eee1">[email&#160;protected]</span></a></li>
         <li><a href="#" data-uz>Toshkent, O'zbekiston</a><a href="#" data-ru>Ташкент, Узбекистан</a></li>
       </ul>
     </div>
@@ -793,7 +875,7 @@ body.ru [data-ru]{display:revert;}
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── UTILS ──
 let lang='uz';
 function scrollTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
@@ -972,16 +1054,4 @@ function loadDash(){
   if(!all.length){
     ml.innerHTML=`<p style="color:#475569;text-align:center;padding:40px;">${lang==='uz'?"Hozircha xabarlar yo'q":"Сообщений пока нет"}</p>`;
   }else{
-    ml.innerHTML=all.slice().reverse().map(m=>`
-      <div class="mi">
-        <div class="mi-hd">
-          <strong>${m.name} &mdash; ${m.email}</strong>
-          <time>${m.time}</time>
-        </div>
-        <p><b style="color:var(--primary2)">${m.service}:</b> ${m.msg}</p>
-      </div>`).join('');
-  }
-}
-</script>
-</body>
-</html>
+   ml.innerHTML = all.slice(0, 10).map(msg => `<li>${msg}</li>`).join('')}}
